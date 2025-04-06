@@ -1,0 +1,183 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+}
+
+/* Colores */
+:root {
+    --primary-color: #294C60;
+    --secondary-color: #3b3b3bb7;
+    --tertiary-color: #d7dae0;
+}
+
+body {
+    background-color: #e0e0e0;
+}
+
+/* Contenido */
+.main_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+    padding: 1em;
+}
+
+.container-information {
+    width: 45%;
+    height: 33em;
+    margin-top: 3em;
+    margin-left: 15em;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.container-information div {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-information label {
+    font-weight: 300;
+    width: 300px;
+}
+
+.container-information input,
+.container-information select {
+    margin-top: .5em;
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    background-color: #e0e0e0;
+    font-weight: 500;
+}
+
+.container-product {
+    width: 30%;
+    height: 33em;
+    margin-top: 3em;
+    margin-right: 5em;
+    padding-top: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.container-product h2,
+.container-product h3 {
+    font-weight: 300;
+    text-align: center;
+    margin: auto;
+}
+
+.container-product h3 {
+    margin-top: -1em;
+    margin-bottom: 1em;
+}
+
+.container-product img {
+    margin-top: 20px;
+    width: 10em;
+    height: 10em;
+    border: black solid;
+    object-fit: cover;
+}
+
+.container-submit {
+    width: 100%;
+    display: flex;
+    flex-direction: row; /* Cambiado a row para que los botones estén uno al lado del otro */
+    justify-content: center; /* Centrar los botones horizontalmente */
+    gap: 1em; /* Espacio entre los botones */
+    border-radius: 100px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.btn {
+    background-color: #5691B3;
+    border-radius: 10px;
+    border: none;
+    padding: 1em;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    /* Eliminado margin-bottom ya que ahora usamos gap */
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .main_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-information {
+        width: 80%;
+        max-width: 600px;
+        margin: 2em auto;
+    }
+
+    .container-product {
+        width: 80%;
+        max-width: 600px;
+        margin: 2em auto;
+    }
+
+    .btn {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-information,
+    .container-product {
+        width: 95%;
+        margin: 1em auto;
+    }
+
+    .container-information input,
+    .container-information select {
+        width: calc(100% - 16px); /* Considerando el padding de 8px en ambos lados */
+    }
+
+    .btn {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-information,
+    .container-product {
+        width: 100%;
+        margin: 1em auto;
+        padding: 1em;
+    }
+
+    .container-information input,
+    .container-information select {
+        width: 100%;
+    }
+
+    .container-submit {
+        gap: 0.5em; /* Reducir el espacio entre los botones */
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 5px; /* Ajustar el espacio inferior entre los botones */
+    }
+}

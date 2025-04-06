@@ -1,0 +1,28 @@
+/* Estilos para los selectores de departamento y ciudad */
+#login-form .input-department select,
+#login-form .input-city select {
+  width: 100%;
+  margin-top: 0.2em;
+  background-color: #e0e0e0;
+  border-radius: 3px;
+  font-family: "Manrope", sans-serif;
+  padding: 8px;
+  border: 2px #EDFFF1;
+}
+
+#login-form .input-department select option,
+#login-form .input-city select option {
+  background-color: #e0e0e0;
+  border-radius: 3px;
+}
+
+#login-form .input-department select:focus,
+#login-form .input-city select:focus {
+  outline: none;
+}
+
+#login-form .input-department,
+#login-form .input-city {
+
+  margin-bottom: 10px; /* Ajusta este valor según tus necesidades */
+}

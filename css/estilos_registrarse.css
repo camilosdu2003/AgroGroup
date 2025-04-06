@@ -1,0 +1,82 @@
+* {
+    font-family: "Manrope", sans-serif;
+}
+
+#titulo-registrarse {
+    text-align: center;
+}
+
+body {
+    background-color: #e0e0e0;
+}
+
+#login-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 500px;
+    margin: 100px auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.input, .select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 3px;
+}
+
+
+
+button {
+    margin-left: 25%;
+    background-color: #294C60;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 50%;
+    font-size: 16px;
+}
+
+.terms{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    margin: .5em 0;
+    & input{
+        width: 30px;
+    }
+
+    & a {
+        margin-left: 5px;
+    }
+}
+
+/* Estilos para los mensajes de error */
+.error-messages {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 20px 0;
+    color: #d9534f; /* Color rojo para resaltar errores */
+    border: 1px solid #d9534f;
+    background-color: #f2dede; /* Fondo rojo claro */
+    border-radius: 4px;
+}
+
+.error-messages li {
+    padding: 8px;
+    border-bottom: 1px solid #d9534f;
+}
+
+.error-messages li:last-child {
+    border-bottom: none;
+}

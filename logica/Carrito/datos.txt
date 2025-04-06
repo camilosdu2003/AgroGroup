@@ -1,0 +1,1 @@
+a:1:{i:0;a:5:{s:2:"id";s:2:"90";s:6:"precio";s:5:"50000";s:8:"cantidad";s:1:"1";s:8:"vendedor";s:10:"1001724386";s:18:"cantidadDisponible";s:1:"2";}}

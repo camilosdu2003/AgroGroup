@@ -1,0 +1,126 @@
+* {
+    font-family: "Manrope", sans-serif;
+}
+
+/* Colores */
+:root {
+    --primary-color: #294C60;
+    --secondary-color: #3b3b3bb7;
+    --tertiary-color: #d7dae0;
+}
+
+body {
+    background-color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    width: 40%;
+    height: fit-content;
+    margin: 4em auto;
+    margin-bottom: 2em;
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+h2 {
+    color: rgba(0, 0, 0, 0.773);
+    font-size: 1.2em;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.2em;
+    margin-bottom: 0.3em;
+}
+
+.direction-container {
+    width: 80%;
+    margin: 3em auto;
+}
+
+.direction-container .info {
+    margin-bottom: 2em;
+}
+
+.direction-container .info h2 {
+    margin-bottom: 0.5em;
+}
+
+/* Ajuste para inputs en pantallas pequeñas y medianas */
+.direction-container .info input[type="text"],
+.direction-container .info input[type="password"],
+.direction-container .info input[type="month"],
+.direction-container .info select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    background-color: #e0e0e0;
+    font-weight: 500;
+    box-sizing: border-box; /* Añadido para incluir el padding y border en el ancho total */
+}
+
+/* Ajuste específico para input de fecha de vencimiento en pantallas pequeñas */
+@media (max-width: 480px) {
+    .direction-container .info input[type="month"] {
+        font-size: 14px; /* Reducir tamaño de fuente para mejorar legibilidad */
+    }
+}
+
+.button-buy,
+.button-cancel {
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 13px;
+    color: black;
+    cursor: pointer;
+    background-color: white;
+}
+
+.button-buy:hover {
+    background-color: var(--primary-color);
+    opacity: 5;
+    color: #fff;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.button-cancel:hover{
+    background-color: rgb(209, 28, 28);
+    opacity: 5;
+    color: #fff;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 5em;
+    gap: 5em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        width: 80%;
+        margin: 2em auto;
+        padding: 1em;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        width: 95%;
+        margin: 2em auto;
+        padding: 1em;
+    }
+}

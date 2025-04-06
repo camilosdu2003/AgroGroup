@@ -1,0 +1,399 @@
+/* Estilos generales */
+
+@font-face {
+    font-family: "Inconsolata";
+    src: url(../fonts/Inconsolata-VariableFont_wdth,wght.ttf);
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url(../fonts/Manrope-VariableFont_wght.ttf);
+}
+
+:root {
+    --primary-color: #294C60;
+    --secondary-color: #3b3b3bb7;
+    --tertiary-color: #d7dae0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: #e0e0e0;
+    font-weight: 400;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/* Header y Footer */
+
+/* Header */
+
+.header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2em;
+}
+
+.header ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.header ul li {
+    margin: 0 1em;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.header ul li a:hover {
+    color: #d7dae0;
+}
+
+/* Footer */
+
+.footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 1em;
+}
+
+/* Contenido */
+
+.category-title {
+    color: #3b3b3bc5;
+    text-align: center;
+    font-size: 2em;
+    margin: 20px 0;
+    font-weight: 100;
+}
+
+.container-slider {
+    margin: 0 0;
+    position: relative;
+    overflow: hidden;
+    height: 36em;
+}
+
+.slider {
+    display: flex;
+    width: 500%;
+    height: 100%;
+    margin-left: -100%;
+    position: relative;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    height: 200%;
+}
+
+.slider__section {
+    width: 100%;
+    position: relative;
+}
+
+.slider__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider__btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.7);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999;
+    margin: 0em .2em;
+}
+
+.slider__btn:hover {
+    background: #fff;
+}
+
+.slider__btn--left {
+    left: 10px;
+}
+
+.slider__btn--right {
+    right: 10px;
+}
+
+.slider__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    z-index: 999;
+}
+
+.slider__title {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 0;
+    color: #fafafac5;
+    font-weight: 400;
+}
+
+.slider__txt {
+    margin: 10px 0;
+    text-align: center;
+    color: #fafafac5;
+}
+
+.btn-shop {
+    display: block;
+    border: 2px solid var(--primary-color);
+    color: #fafafac5;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+    margin: 40px auto;
+    font-size: 0.7em;
+    transition: all 0.2s ease-in-out;    
+}
+
+.btn-shop:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
+}
+
+/* Nuevos Artículos */
+
+.title-news-art {
+    text-align: center;
+    margin: 3em;
+    font-size: 2em;
+    font-weight: 100;
+}
+
+.container-news-art {
+    margin: 0 8em;
+    margin-bottom: 7em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 3em;   
+}
+
+.news-art {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 18.75em;
+    height: 28.125em; 
+    background-color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+.news-art a {
+    width: 90%;
+    height: 70%;
+    margin: 0 auto;
+}
+
+.news-art h2 {
+    margin: 0 .5em -1em .5em;
+    font-size: 1.05rem;
+    font-weight: 300;
+}
+
+.news-art h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0em .5em;
+}
+
+.news-art:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
+}
+
+.news-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn-see-more {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    margin: 0 auto 5em auto;
+    padding: 1em 1.5em;
+    border-radius:50px;
+    text-decoration: none;
+    background-color: #5691B3;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-see-more:hover {
+    background-color: var(--primary-color);
+}
+
+.hidden {
+    pointer-events: none;
+    cursor: none;
+}
+
+/* Media Queries para Responsividad */
+
+/* Tablets y dispositivos más pequeños */
+@media (max-width: 1024px) {
+    .container-news-art {
+        margin: 0 3em;
+    }
+
+    .container-slider {
+        height: 26em;
+    }
+
+    .slider__title {
+        font-size: 2em;
+    }
+
+    .slider__content {
+        width: 80%;
+    }
+
+    .slider__txt {
+        font-size: 0.9em;
+    }
+
+    .btn-shop {
+        width: 120px;
+        font-size: 0.6em;
+    }
+
+    .news-art {
+        width: 16em;
+        height: 24em;
+    }
+
+    .news-art h2 {
+        font-size: 1rem;
+    }
+
+    .news-art h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Teléfonos y dispositivos más pequeños */
+@media (max-width: 768px) {
+    .container-slider {
+        height: 20em;
+    }
+
+    .slider__title {
+        font-size: 1.8em;
+    }
+
+    .slider__content {
+        width: 90%;
+    }
+
+    .slider__txt {
+        font-size: 0.8em;
+    }
+
+    .btn-shop {
+        width: 100px;
+        font-size: 0.5em;
+    }
+
+    .news-art {
+        width: 14em;
+        height: 22em;
+    }
+
+    .news-art h2 {
+        font-size: 0.9rem;
+    }
+
+    .news-art h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Teléfonos pequeños y dispositivos similares */
+@media (max-width: 480px) {
+    .container-slider {
+        height: 16em;
+    }
+
+    .slider__title {
+        font-size: 1.5em;
+    }
+
+    .slider__content {
+        width: 90%;
+    }
+
+    .slider__txt {
+        font-size: 0.7em;
+    }
+
+    .btn-shop {
+        width: 90px;
+        font-size: 0.4em;
+    }
+
+    .news-art {
+        width: 12em;
+        height: 20em;
+    }
+
+    .news-art h2 {
+        font-size: 0.8rem;
+    }
+
+    .news-art h3 {
+        font-size: 0.9rem;
+    }
+}

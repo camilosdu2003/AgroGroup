@@ -1,0 +1,112 @@
+/* General */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+}
+
+/* Colores */
+:root {
+    --primary-color: #294C60;
+    --secondary-color: #3b3b3bb7;
+    --tertiary-color: #d7dae0;
+    --icon-color: #595959; /* Gris medio oscuro */
+}
+
+/* Body */
+body {
+    background-color: #e0e0e0;
+}
+
+/* Main Container */
+.main-container {
+    background-color: #fff;
+    width: 25%; /* Ancho original para pantallas grandes */
+    margin: 5em auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        width: 80%; /* Ancho ajustado para dispositivos más pequeños */
+    }
+}
+
+/* Password Container */
+.password_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.password_container label {
+    align-self: flex-start;
+    margin-left: 10%;
+    margin-bottom: 5px;
+}
+
+.input-container {
+    position: relative;
+    width: 80%;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 8px;
+    padding-right: 40px; /* Espacio adicional para el ícono */
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.input-container .material-symbols-outlined {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--icon-color); /* Color gris medio oscuro */
+}
+
+/* Container Submit */
+.container-submit {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-submit input {
+    border: none;
+    width: 135px;
+    padding: .5em;
+    border-radius: 9px;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: rgb(93, 158, 93);
+}
+
+.container-submit input:hover {
+    background-color: rgb(68, 132, 68); /* Cambia el color en hover */
+}
+
+/* Ajustes adicionales para tablets si es necesario */
+@media (min-width: 768px) {
+    .input-container {
+        width: 80%; /* Ancho reducido para tablets */
+    }
+    
+    .container-submit input {
+        width: auto; /* Ancho automático para tablets */
+    }
+}

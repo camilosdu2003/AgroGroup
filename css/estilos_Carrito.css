@@ -1,0 +1,312 @@
+/* Estilos generales que se aplican en todas las pantallas */
+* {
+    font-family: "Manrope", sans-serif;
+}
+
+:root {
+    --primary-color: #294C60;
+    --secondary-color: #3b3b3bb7;
+    --tertiary-color: #d7dae0;
+}
+
+body {
+    background-color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+.title__container {
+    width: 100%;
+    height: 5em;
+    text-align: center;
+}
+
+.header__menu {
+    margin-bottom: .2em;
+}
+
+.container {
+    width: 70%;
+    max-width: 1200px;
+    margin: 5em auto;
+    background-color: #fff;
+    padding: 1.5em;
+    border-radius: 8px;
+}
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 1em 0;
+    border-bottom: 1px solid #f0f0f0;
+    width: 100%;
+}
+
+.product-image {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.product-image img {
+    object-fit: cover;
+    width: 100%;
+    max-width: 150px; /* Tamaño máximo para imagen */
+    height: auto;
+}
+
+.product-info {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.product-info h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.product-price {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.product-price h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+}
+
+.product-price h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.product-quantity {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.product-quantity label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+}
+
+.product-quantity input {
+    background-color: #e0e0e0;
+    font-size: 1.1rem;
+    width: 100%;
+    height: 2em;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.total__product {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.total__product h2 {
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-bottom: 0.5em;
+}
+
+.total__product h3 {
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.product-delete {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-delete i {
+    font-size: 2rem;
+}
+
+.product-delete i:hover {
+    color: rgb(217, 19, 19);
+    cursor: pointer;
+}
+
+.total__product {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .8em;
+}
+
+.total__product h2 {
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.total__product h3 {
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.total {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5em;
+}
+
+.total-value {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5em;
+    gap: 4em;
+}
+
+.button {
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.button-cancel {
+    background-color: #e0e0e0;
+    width: 10em;
+}
+
+.button-buy {
+    background-color: #5691B3;
+    width: 8em;
+    color: #fff;
+}
+
+.button-buy:hover {
+    background-color: var(--primary-color);
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: 2em auto;
+        padding: 1em;
+    }
+
+    .product {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .product-image, .product-info, .product-price, .product-quantity, .total__product, .product-delete {
+        width: 100%;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+
+    .product-image img {
+        max-width: 100px;
+    }
+
+    .product-info h2, .product-price h2, .product-quantity label, .total__product h2 {
+        font-size: 1rem;
+    }
+
+    .product-price h3, .total__product h3 {
+        font-size: 0.9rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .button-cancel, .button-buy {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+/* Media Query para pantallas medianas (tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        width: 85%;
+        margin: 3em auto;
+        padding: 1.2em;
+    }
+
+    .product {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .product-image, .product-info, .product-price, .product-quantity, .total__product, .product-delete {
+        width: 48%;
+        margin-bottom: 1em;
+    }
+
+    .product-image img {
+        max-width: 120px;
+    }
+
+    .product-info h2, .product-price h2, .product-quantity label, .total__product h2 {
+        font-size: 1.1rem;
+    }
+
+    .product-price h3, .total__product h3 {
+        font-size: 1rem;
+    }
+
+    .buttons {
+        flex-direction: row;
+        gap: 2em;
+    }
+
+    .button {
+        width: 150px;
+    }
+
+    .button-cancel, .button-buy {
+        width: auto;
+    }
+}

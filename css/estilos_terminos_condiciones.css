@@ -1,0 +1,24 @@
+* {
+    font-family: "Manrope", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f8f8;
+}
+
+.terms {
+    max-width: 60%;
+    margin: 30px auto; /* Margen arriba y abajo */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.terms p {
+    font-size: 16px;
+    line-height: 1.6;
+}

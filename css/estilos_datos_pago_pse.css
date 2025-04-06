@@ -1,0 +1,141 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+}
+
+/* Colores */
+:root{
+    --primary-color: #294C60;
+    --secondary-color: #3b3b3bb7;
+    --tertiary-color: #d7dae0;
+}
+body{
+    background-color: #e0e0e0;
+}
+
+/* contenido */
+.main_container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.container-information {
+    width: 45%;
+    height: auto;
+    margin-top: 3em;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.container-information label {
+    font-weight: 300;
+    width: 100%;
+}
+
+.container-information input,
+.container-information select {
+    margin-top: .5em;
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    background-color: #e0e0e0;
+    font-weight: 500;
+}
+
+.container-product{
+    background-color: #fff; 
+    display: flex;
+    align-items: center;
+    gap: 1.8em;
+    margin-top: 3em;
+    padding: 1.5em;
+    width: 45%;
+    height: auto;
+    border-radius: 8px;
+    flex-direction: column;
+    
+    & h2{
+        font-weight: 300;
+    }
+
+    & h3{
+        margin-top: -1.5em;
+        margin-bottom: -.5em;
+    }
+}
+
+.container-product img{
+    margin-top: 20px;
+    width: 10em;
+    height: 10em;
+    border: black solid;
+    object-fit: cover;
+}
+
+.container-submit{
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    border-radius: 100px;
+}
+
+.btn{
+    background-color: #5691B3;
+    border-radius: 10px;
+    border: #d7dae0;
+    padding: 1em;
+    color: #fff;
+    margin-bottom: 3em;
+    text-align: center;
+    width: 200px; /* Ancho fijo para los botones */
+}
+.btn:hover{
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .container-information, .container-product {
+        width: 90%;
+    }
+
+    .container-submit {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .btn {
+        width: 90%;
+    }
+}
+
+/* Media Query para pantallas medianas (tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container-information, .container-product {
+        width: 70%;
+    }
+
+    .container-submit {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .btn {
+        width: 70%;
+    }
+}

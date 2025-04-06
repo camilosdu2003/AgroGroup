@@ -1,0 +1,161 @@
+* {
+    font-family: "Manrope", sans-serif;
+}
+
+/* Colores */
+:root {
+    --primary-color: #294C60;
+    --secondary-color: #3b3b3bb7;
+    --tertiary-color: #d7dae0;
+}
+
+body {
+    background-color: #e0e0e0;
+}
+
+.main-container {
+    width: 40%;
+    height: 25vh;
+    margin: 4em auto;
+    margin-bottom: 2em;
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+h2 {
+    color: rgba(0, 0, 0, 0.773);
+    font-size: 1.2em;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.2em;
+    margin-bottom: 0.3em;
+}
+
+.direction-container {
+    margin: 3em 2em;
+    width: 100%;
+}
+
+.direction-container label {
+    font-weight: 300;
+    width: 300px;
+}
+
+.direction-container input {
+    margin-top: .5em;
+    margin-bottom: 2em;
+    width: 100%;
+    max-width: 500px;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    background-color: #e0e0e0;
+    font-weight: 500;
+}
+
+.button-buy {
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 13px;
+    color: black;
+    cursor: pointer;
+    background-color: white;
+}
+
+.button-buy:hover {
+    background-color: var(--primary-color);
+    opacity: 5;
+    color: #fff;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.button-cancel {
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-size: 13px;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.button-cancel:hover {
+    background-color: rgb(226, 24, 24);
+    opacity: 5;
+    color: #fff;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 5em;
+    gap: 5em;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .main-container {
+        width: 80%;
+        flex-direction: column;
+        height: auto;
+        padding: 2em;
+        align-items: center;
+    }
+
+    .direction-container {
+        margin: 2em 1em;
+    }
+
+    .direction-container input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        width: 95%;
+        margin: 2em auto;
+        padding: 1em;
+        align-items: center;
+    }
+
+    .direction-container {
+        margin: 1em 0.5em;
+    }
+
+    .direction-container input {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 1em;
+        text-align: center;
+        width: 100%;
+    }
+
+    .button-buy, .button-cancel {
+        width: 100px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 1em;
+        margin-bottom: 2em;
+    }
+}
